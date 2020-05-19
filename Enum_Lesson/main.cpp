@@ -7,26 +7,38 @@ enum DogBreed {
     GermanShepard
 };
 
-static void PrintDogBreedMsg(const std::string in_dog_name, const DogBreed in_dog_breed) {
-    std::cout << in_dog_name << " is a ";
-
+static std::string DogBreed_ToString(const DogBreed in_dog_breed)
+{
     switch (in_dog_breed) {
         case Lab:
-            std::cout << "Lab" << std::endl;
-            break;
+            return "Lab";
         case GoldenRetriever:
-            std::cout << "Golden Retriever" << std::endl;
-            break;
+            return "Golden Retriever";
         case 2: // implicit cast from enum to int
-            std::cout << "Poodle" << std::endl;
-            break;
+            return "Poodle";
         case GermanShepard:
-            std::cout << "German Shepard" << std::endl;
-            break;
+            return "German Shepard";
     }
+    return "Invalid Dog Breed";
 }
 
+void PrintAllBreeds() {
+    std::cout << "The dog breeds are ";
+    for (int i = Lab; i < GermanShepard; i++) {
+        std::cout << DogBreed_ToString(static_cast<DogBreed>(i)) << ", ";
+    }
+    std::cout << "and " << DogBreed_ToString(GermanShepard) << "." << std:: endl;
+}
+
+static void PrintDogBreedMsg(const std::string in_dog_name, const DogBreed in_dog_breed) {
+    std::cout << in_dog_name << " is a " << DogBreed_ToString(in_dog_breed) << "." << std::endl;
+}
+
+
+
 int main() {
+
+    PrintAllBreeds();
 
     std::string roxie_name = "Roxie";
     DogBreed roxie_breed = Lab;
