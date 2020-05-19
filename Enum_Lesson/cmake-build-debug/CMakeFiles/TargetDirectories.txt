@@ -1,0 +1,3 @@
+C:/Users/bstone/CLionProjects/Enum_Lesson/cmake-build-debug/CMakeFiles/Enum_Lesson.dir
+C:/Users/bstone/CLionProjects/Enum_Lesson/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/bstone/CLionProjects/Enum_Lesson/cmake-build-debug/CMakeFiles/rebuild_cache.dir
